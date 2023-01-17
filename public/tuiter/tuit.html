@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Create a screen for posting new tuits.
+  
+  <!-- Add a Back link to navigate back to navigation.html. -->
+  <a href="navigation.html">Back</a>
+
+  <!-- Add an h1 Tuiter header at the top of the document. -->
+  <h1>Tuiter</h1>
+  
+  <!-- Add a smaller h2 Tuit header under that. -->
+  <h2>Tuit</h2>
+  
+  <!-- Below the headers, add a 48x48 pixel image representing the owner of the account. -->
+  <img src="wzw.jpg" alt="" width="48" height="48"><br/>
+  
+  <!-- Add a textarea element for users to post new tuits. The textarea should have a placeholder that says What's happening?. -->
+  <textarea placeholder="What's happening?"></textarea><br/>
+  
+  <!-- Add a dropdown with options Everyone can reply, People you follow, and Only people you mention, with values EVERYONE, FOLLOWING, and MENTIONED respectively. 
+    Default value should be EVERYONE. -->
+  <select>
+    <option value="EVERYONE">Everyone can reply</option>
+    <option value="FOLLOWING">People you follow</option>
+    <option value="MENTIONED">Only people you mention</option>
+  </select><br>
+
+  <!-- Add a button to upload an image. -->
+  <hr/>
+  <input type="file"/>
+
+  <!-- Add a button labeled Tuit to create the new tuit. The page should look as shown here on the right. -->
+  <button>Tuit</button>
+  <hr/>
+
+
+</body>
+</html>
