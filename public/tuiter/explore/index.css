@@ -1,0 +1,113 @@
+body {
+  background-color: black;
+  padding: 16px;
+  color: white;
+}
+
+.wd-border {
+  color: rgb(47, 51, 54);
+}
+
+/* rounded corners */
+.wd-rounded-corners-all-around-50px {
+  border-radius: 50px;
+}
+
+.wd-rounded-corners-all-around-10px {
+  border-radius: 10px;
+}
+
+input {
+  color: white;
+  padding: 12px;
+  margin: 12px;
+}
+
+/* background color */
+.wd-bg-color-dark-gray {
+  background-color: darkgray;
+}
+
+/* font color */
+
+
+/* font size */
+
+
+#explore-settings {
+  position: absolute;
+  right: 12px;
+}
+
+
+/* float */
+.wd-float-left {
+  float: left;
+}
+
+.wd-float-right {
+  float: right;
+}
+
+.wd-float-done {
+  clear: both;
+}
+
+/* grid */
+.wd-grid-row {
+  clear: both;
+}
+
+/* search input and tab links div */
+.wd-search-and-tab-links {
+  width: 100%;
+  border: 2px rgb(47, 51, 54) solid;
+}
+
+/* tab links */
+.wd-tab-links {
+  margin: 24px;
+}
+
+.wd-tab-links a {
+  font-size: 15px;
+  padding: 16px;
+  text-decoration: none;
+  color: rgb(110, 118, 125);
+}
+
+.wd-tab-links > .wd-tab-link-highlighted {
+  color: rgb(29, 161, 242);
+  border-bottom: solid rgb(29, 161, 242) 2px;
+}
+
+/* suggested posts */
+.wd-suggested-posts {
+  color: white;
+}
+
+.wd-suggested-posts-card {
+  padding: 10px;
+  height: 100px;
+  border: 2px rgb(47, 51, 54) solid;
+}
+
+.wd-suggested-posts-card-topic {
+  font-size: 13px;
+  color: rgb(110, 118, 125);
+}
+
+.wd-suggested-posts-card-author {
+  font-size: 13px;
+  color: white;
+}
+
+.wd-suggested-posts-card-title {
+  font-size: 20px;
+  color: white;
+}
+
+.wd-suggested-posts-card-number-of-tuits {
+  font-size: 13px;
+  color: rgb(110, 118, 125);
+}
