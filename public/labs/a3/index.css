@@ -213,3 +213,190 @@ p#id-selector-1 {
   float: left;
 }
 
+/* 5 challenges */
+.rotate-paragraph {
+  width: 250px;
+  height: 250px;
+  transform: rotate(90deg);
+}
+
+/* 5.1 Rotate a list */
+.rotate-list {
+  transform: rotate(12deg);
+  width: 100px;
+  background-color: red;
+  color: white;
+}
+
+/* 5.2 Rotating a list item */
+.rotate-list-items li {
+  width: 100px;
+  text-align: right;
+}
+.rotate-list-items li:nth-child(1) {
+  transform: rotate(-10deg);
+  background-color: yellow;
+}
+.rotate-list-items li:nth-child(2) {
+  transform: rotate(2deg);
+  background-color: blue;
+  color: white;
+}
+.rotate-list-items li:nth-child(3) {
+  transform: rotate(10deg);
+  background-color: red;
+}
+
+/* 5.3 Rotating images */
+.rotate-image {
+  transform: rotate(-10deg);
+}
+
+/* 5.4 Rotate a table */
+.rotate-table {
+  position: relative;
+  left: 50px;
+  transform: rotate(15deg);}
+.rotate-table tr:nth-child(1) {
+  background-color: black;
+  color: white;}
+.rotate-table tr:nth-child(n+2) {
+  background-color: yellow;}
+.rotate-table tr:nth-child(n+5) {
+  background-color: blue;
+  color: white;}
+.rotate-table tr:nth-child(n+8) {
+  background-color: red;}
+.rotate-table tr:nth-child(n+11) {
+  background-color: green;
+  color: white;
+}
+
+/* 5.5 Gradients */
+.gradients-linear {
+  background: linear-gradient(yellow, red);
+  width: 200px;
+  height: 200px;
+}
+.gradients-linear-wzw-example {
+  background: linear-gradient(lightblue, blue);
+  width: 200px;
+  height: 200px;
+}
+
+/* 5.5.1 Radial gradients */
+.gradients-radial {
+  background: radial-gradient(yellow, green);
+  width: 200px;
+  height: 200px;
+}
+.gradients-radial-wzw {
+  background: radial-gradient(red, pink);
+  width: 200px;
+  height: 200px;
+}
+
+/* 5.5.2 Positioning radial gradients */
+.gradients-positioned {
+  background: radial-gradient(at top left, blue, red);
+  width: 200px;
+  height: 200px;
+  color: white;
+}
+.gradients-positioned-wzw {
+  background: radial-gradient(at bottom right, green, yellow);
+  width: 200px;
+  height: 200px;
+  color: white;
+}
+
+/* 5.6 Animations */
+.animation-keyframes {
+  position: relative;
+  top: 0px;
+  animation-duration: 7s;
+  animation-name: slidein;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  color: white;
+}
+
+@keyframes slidein {
+  from {
+    position: relative;
+    top: 0px;
+    font-size: 100%;
+    margin-left: 100%;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    color: black;
+  }
+  50% {
+    position: relative;
+    top: -200px;
+    font-size: 300%;
+    margin-left: 25%;
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    color: white;
+  }
+  to {
+    position: relative;
+    top: 0px;
+    font-size: 100%;
+    margin-left: 0%;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: white;
+  }
+}
+
+.animation-keyframes-wzw {
+  position: relative;
+  top: 0px;
+  animation-duration: 7s;
+  animation-name: slidein-wzw;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  width: 180px;
+  height: 180px;
+  background-color: pink;
+  color: white;
+}
+
+@keyframes slidein-wzw {
+  from {
+    position: relative;
+    top: 0px;
+    font-size: 80%;
+    margin-left: 100%;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: black;
+  }
+  50% {
+    position: relative;
+    top: -200px;
+    font-size: 400%;
+    margin-left: 25%;
+    width: 400px;
+    height: 400px;
+    background-color: darkred;
+    color: white;
+  }
+  to {
+    position: relative;
+    top: 0px;
+    font-size: 100%;
+    margin-left: 0%;
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    color: white;
+  }
+}
