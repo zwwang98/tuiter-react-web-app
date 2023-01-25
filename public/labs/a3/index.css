@@ -496,3 +496,145 @@ p#id-selector-1 {
 .flex-container-stretch-evenly > .flex-box {
   flex-basis: 100%;
 }
+
+/* 5.8 Media queries */
+@media (min-width: 0px)
+   and (max-width: 600px) {
+   body {
+       background-color: yellow;
+   }
+   .media-query {
+       background-color: red;
+       color: white;
+   }
+}
+
+@media (min-width: 600px)
+   and (max-width: 1200px) {
+   body {
+       background-color: blue;
+       color: white;
+   }
+   .media-query {
+       background-color: yellow;
+       color: black;
+   }
+}
+
+@media (min-width: 1200px)
+   and (max-width: 1800px) {
+   body {
+       background-color: lightseagreen;
+       color: white;
+   }
+   .media-query {
+       background-color: lightcyan;
+       color: black;
+   }
+}
+
+/* my own examples */
+@media (min-width: 0px)
+   and (max-width: 600px) {
+   body {
+       background-color: darkblue;
+   }
+   .media-query-wzw-h2 {
+       background-color: blue;
+       color: white;
+   }
+}
+
+@media (min-width: 600px)
+   and (max-width: 1200px) {
+   body {
+       background-color: cyan;
+       color: black;
+   }
+   .media-query-wzw-h2 {
+       background-color: darkcyan;
+       color: white;
+   }
+}
+
+@media (min-width: 1200px)
+   and (max-width: 1800px) {
+   body {
+       background-color: lightseagreen;
+       color: white;
+   }
+   .media-query-wzw-h2 {
+       background-color: lightcyan;
+       color: black;
+   }
+}
+
+@media (min-width: 0px)
+   and (max-width: 600px) {
+   body {
+       background-color: pink;
+   }
+   .media-query-wzw-div {
+       background-color: orange;
+       color: white;
+   }
+}
+
+@media (min-width: 600px)
+   and (max-width: 1200px) {
+   body {
+       background-color: saddlebrown;
+       color: seashell;
+   }
+   .media-query-wzw-div {
+       background-color: burlywood;
+       color: whitesmoke;
+   }
+}
+
+@media (min-width: 1200px)
+   and (max-width: 1800px) {
+   body {
+       background-color: bisque;
+       color: orange;
+   }
+   .media-query-wzw-div {
+       background-color: orange;
+       color: black;
+   }
+}
+
+@media (min-width: 0px)
+   and (max-width: 600px) {
+   body {
+       background-color: yellowgreen;
+   }
+   .media-query-wzw-p {
+       background-color: purple;
+       color: white;
+   }
+}
+
+@media (min-width: 600px)
+   and (max-width: 1200px) {
+   body {
+       background-color: purple;
+       color: white;
+   }
+   .media-query-wzw-p {
+       background-color: plum;
+       color: wheat;
+   }
+}
+
+@media (min-width: 1200px)
+   and (max-width: 1800px) {
+   body {
+       background-color: pink;
+       color: white;
+   }
+   .media-query-wzw-p {
+       background-color: lightcoral;
+       color: black;
+   }
+}
