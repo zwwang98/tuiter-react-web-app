@@ -1,0 +1,139 @@
+body {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wd-bookmarks-header {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 2px rgb(47, 51, 54) solid;
+}
+
+.wd-bookmarks-header-title {
+  font-size: 20px;
+  color: white;
+}
+
+.wd-bookmarks-header-user-handle {
+  font-size: 13px;
+  color: lightgray;
+}
+
+.wd-bookmark-card {
+  position: relative;
+  padding-top: 12px;
+  /* background-color: green; */
+  border: 1px solid rgb(47, 51, 54);
+}
+
+.wd-avatar {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin-left: 16px;
+  margin-right: 12px;
+}
+
+.wd-grid-row {
+  clear: both;
+}
+
+.wd-float-left {
+  float: left;
+}
+
+.wd-float-right {
+  float: right;
+}
+
+.wd-float-done {
+  clear: both;
+}
+
+.wd-bookmark-card-author-name {
+  font-size: 15px;
+  color: white;
+}
+
+.wd-bookmark-card-author-handle {
+  font-size: 15px;
+  color: lightgray;
+}
+
+.wd-bookmark-card-date {
+  font-size: 12px;
+  color: lightgray;
+}
+
+.wd-bookmark-card-main-content {
+  font-size: 15px;
+  color: white;
+  max-width: 506px;
+  margin-right: 16px;
+  margin-top: 12px;
+}
+
+.wd-top-rounded-5 {
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+
+.wd-bottom-rounded-5 {
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+
+.wd-bookmark-link-card {
+  margin-top: 12px;
+  margin-right: 16px;
+  border: 1px solid rgb(47, 51, 54);
+  max-width: 100rem;
+}
+
+.wd-bookmark-link-card-info {
+  padding: 12px;
+}
+
+.wd-bookmark-link-card-title {
+  margin-top: 12px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.wd-bookmark-link-card-description {
+  color: lightgray;
+  font-size: 15px;
+}
+
+.wd-bookmark-card-user-actions {
+  margin-top: 12px;
+  color: white;
+}
+
+.wd-bookmark-card-user-action {
+  width: 25%;
+}
+
+.wd-bookmark-card-user-action-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.wd-lightgray {
+  color: lightgray;
+}
+
+.wd-red {
+  color: red;
+}
+
+.wd-font-16 {
+  font-size: 16px;
+}
