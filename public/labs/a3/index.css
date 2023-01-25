@@ -400,3 +400,99 @@ p#id-selector-1 {
     color: white;
   }
 }
+
+/* 5.7 flex */
+.flex-container {
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+}
+.flex-box {
+  border: 5px gray solid;
+  margin: 10px;
+  padding: 10px;
+}
+.flex-box-1 {
+  background-color: yellow;
+}
+.flex-box-2 {
+  background-color: blue;
+  color: white;
+}
+.flex-box-3 {
+  background-color: red;
+  color: white;
+}
+
+.flex-container-center {
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+  justify-content: center;
+  display: flex;
+}
+
+.flex-container-end {
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+  justify-content: end;
+  display: flex;
+}
+
+.flex-container-space-around {
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+  justify-content: space-around;
+  display: flex;
+}
+
+.flex-container-space-between {
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+  justify-content: space-between;
+  display: flex;
+}
+
+/* 5.7.2 Aligning flex elements vertically */
+.flex-container-align-items-flex-start {
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.flex-container-align-items-flex-end {
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.flex-container-align-items-center {
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.flex-container-stretch-evenly {
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+  display: flex;
+  /*justify-content: space-evenly;*/
+  /*align-items: center;*/
+}
+
+.flex-container-stretch-evenly > .flex-box {
+  flex-basis: 100%;
+}
