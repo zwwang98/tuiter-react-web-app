@@ -1,129 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./index.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <!-- local bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../../vendors/bootstrap-5.1.3-dist/css/bootstrap.min.css"
+    />
+    <!-- local fontawesome -->
+    <link
+      href="../../vendors/fontawesome-free-6.2.1-web/css/all.css"
+      rel="stylesheet"
+    />
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js",
+          "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.esm.min.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import * as bootstrap from "bootstrap";
 
-  <!-- At the top there's an input field with rounded corners and a placeholder that reads "Search Tuiter".
-    The color of the text is white and the background color is dark gray.
-    12px from the right border there's a link in the form of a gear that references "explore-settings.htm -->
-    <div class="wd-search-and-tab-links">
-      <div>
-        <input type="text" placeholder="Search Tuiter" size="100"
-                class="wd-rounded-corners-all-around-50px wd-bg-color-dark-gray wd-float-left">
-        <a href="explore-settings.html" class="wd-float-right" title="Explore Settings">
-          <img src="../static/gear.svg" alt="settings" height="24px" width="24px" >
-        </a>
-        <div class="wd-float-done"></div>
-      </div>
-    
-      <!-- Below the search input field there are a set of hyperlinks labeled "For you", "Trending", etc.
-        The first link is highlighted with RGB color 29,161,242.
-        The border below the highlighted link is the same color.
-        All other links are color 110, 118, 125.
-        The link fonts are 15px and padded all around by 16px. -->
-      <div class="wd-grid-row wd-tab-links">
-        <a href="" class="wd-tab-link-highlighted">For you</a>
-        <a href="">Trending</a>
-        <a href="">Covid-19</a>
-        <a href="">News</a>
-        <a href="">Sports</a>
-        <a href="">Entertainment</a>
-      </div>
-    </div>
-  
-    <!-- Below the links there are suggested posts.
-      The suggested posts have the topic, title and number of tuits.
-      The topic, "Trending in Science", "Sports Tranding", "Trending in United States", have 13px font and color 110, 118, 125
-   -->
-   <div class="wd-suggested-posts">
-     <!--  -->
-    
-    <div class="wd-suggested-posts-card">
-      <div>
-        <div class="wd-suggested-posts-card-topic">
-          Trending in Sciene
-        </div>
-        <div class="wd-suggested-posts-card-title">
-          Starship
-        </div>
-        <div class="wd-suggested-posts-card-number-of-tuits">
-        55.5K Tuits
-        </div>
-      </div>
-    </div>
-    
-    <div class="wd-suggested-posts-card">
-      <div>
-        <div class="wd-suggested-posts-card-topic">
-          Sports
-        </div>
-        <div class="wd-suggested-posts-card-title">
-          Joe Rogan
-        </div>
-        <div class="wd-suggested-posts-card-number-of-tuits">
-          5,218 Tuits
-        </div>
-      </div>
-    </div>
-    
-    <div class="wd-suggested-posts-card">
-      <div class="wd-float-left">
-        <div class="wd-suggested-posts-card-author">
-          The New York Times
-        </div>
-        <div class="wd-suggested-posts-card-title">
-          CNN's Cuomo coundrum: A star anchor with a brother in trouble
-        </div>
-      </div>
-      <img src="../static/navigation-nytimes.png" alt="nytimes image" width="100px" height="100px" class="wd-float-right wd-rounded-corners-all-around-10px">
-      <div class="float-done"></div>
-    </div>
+      new bootstrap.Popover(document.getElementById("popoverButton"));
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- show current size -->
+      <h1 class="mb-3">
+        <span class="d-block d-sm-none fa-2x">XS</span>
+        <span class="d-none d-sm-block d-md-none fa-2x">S</span>
+        <span class="d-none d-md-block d-lg-none fa-2x">M</span>
+        <span class="d-none d-lg-block d-xl-none fa-2x">L</span>
+        <span class="d-none d-xl-block d-xxl-none fa-2x">XL</span>
+        <span class="d-none d-xxl-block fa-2x">XXL</span>
+      </h1>
 
-    <div class="wd-suggested-posts-card">
-      <div class="wd-float-left">
-        <div class="wd-suggested-posts-card-author">
-          Bloomberg Opinion
+      <div class="row align-items-start">
+        <!-- left nav bar -->
+        <div class="col-xxl-2 col-xl-2 col-lg-1 col-md-2 col-sm-2 col-1 p-2">
+          <ul class="list-group mb-2">
+            <li href="" class="list-group-item list-group-item-action">
+              <i class="fab fa-twitter fa-1x col"></i>
+            </li>
+            <li
+              href=""
+              class="list-group-item list-group-item-action d-flex align-items-center"
+            >
+              <i class="fa fa-home fa-1x me-2"></i>
+              <span class="d-none d-xxl-block d-xl-block">Home</span>
+            </li>
+            <li
+              href=""
+              class="list-group-item list-group-item-action active d-flex align-items-center"
+            >
+              <i class="fa fa-hashtag fa-1x me-2"></i>
+              <span class="d-none d-xxl-block d-xl-block">Explore</span>
+            </li>
+            <li
+              href=""
+              class="list-group-item list-group-item-action d-flex align-items-center"
+            >
+              <i class="far fa-bell fa-1x me-2"></i>
+              <span class="d-none d-xxl-block d-xl-block">Notification</span>
+            </li>
+            <li
+              href=""
+              class="list-group-item list-group-item-action d-flex align-items-center"
+            >
+              <i class="far fa-envelope me-2"></i>
+              <span class="d-none d-xxl-block d-xl-block">Messages</span>
+            </li>
+            <li
+              href=""
+              class="list-group-item list-group-item-action d-flex align-items-center"
+            >
+              <i class="fa fa-bookmark fa-1x me-2"></i>
+              <span class="d-none d-xxl-block d-xl-block">Lists</span>
+            </li>
+            <li
+              href=""
+              class="list-group-item list-group-item-action d-flex align-items-center"
+            >
+              <i class="fa fa-user fa-1x me-2"></i>
+              <span class="d-none d-xxl-block d-xl-block">Profiles</span>
+            </li>
+            <li
+              href=""
+              class="list-group-item list-group-item-action d-flex align-items-center"
+            >
+              <i class="fa fa-circle-info fa-1x me-2"></i>
+              <span class="d-none d-xxl-block d-xl-block">More</span>
+            </li>
+          </ul>
+          <button class="btn btn-primary w-100 rounded-pill">Tweet</button>
         </div>
-        <div class="wd-suggested-posts-card-title">
-          Thinking about getting a booster? Read this first.
+
+        <!-- main content -->
+        <div
+          class="col-xxl-6 col-xl-6 col-lg-7 col-md-10 col-sm-10 col-11 bg-light-white pt-2 ps-3 pe-3"
+        >
+          <!-- Search Bar -->
+          <div class="row mb-2">
+            <div class="col-10">
+              <div
+                class="input-group d-flex align-items-center border-secondary border border-1 wd-rounded-corners-all-around-50px ps-2 pe-4"
+              >
+                <i class="fa fa-magnifying-glass me-2"></i>
+                <input
+                  type="search"
+                  class="form-control border-0"
+                  id="search-twitter"
+                  placeholder="Search Twitter"
+                  width="80%"
+                />
+              </div>
+            </div>
+            <div class="col-2 d-flex justify-content-center align-items-center">
+              <span class="text-primary">
+                <i class="fa fa-cog fa-xl"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- Tabs -->
+          <ul class="nav nav-tabs mb-2" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="for-you-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#for-you-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="for-you-tab-pane"
+                aria-selected="true"
+              >
+                For you
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="trending-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#trending-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="trending-tab-pane"
+                aria-selected="false"
+              >
+                Trending
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="news-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#news-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="news-tab-pane"
+                aria-selected="false"
+              >
+                News
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="sports-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#sports-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="sports-tab-pane"
+                aria-selected="false"
+              >
+                Sports
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link d-sm-none d-md-block"
+                id="entertainment-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#entertainment-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="entertainment-tab-pane"
+                aria-selected="false"
+              >
+                Entertainment
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="for-you-tab-pane"
+              role="tabpanel"
+              aria-labelledby="for-you-tab"
+              tabindex="0"
+            >
+              <div class="card">
+                <div class="card text-bg-dark">
+                  <img
+                    src="../../images/spacex-starship.webp"
+                    class="card-img"
+                    alt="..."
+                    height="400px"
+                  />
+                  <div class="card-img-overlay d-flex align-items-end">
+                    <div class="text-white">
+                      <h4 class="card-title">SpaceX's Starship</h4>
+                    </div>
+                  </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <!-- for you tab 1st list item -->
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <div class="fs-6 text-muted">Web Development</div>
+                      <div class="fs-6">
+                        <span class="fw-bold">ReactJS</span>
+                        <i class="fa fa-circle-check"></i>
+                        <span class="text-muted"> - 2h</span>
+                      </div>
+                      <div class="fs-6 fw-bold">
+                        ReactJS is a component based front end library that
+                        makes it very easy to build Single Page Applications or
+                        SAPs
+                      </div>
+                    </div>
+                    <img
+                      src="../../images/reactjs-logo.png"
+                      alt=""
+                      width="120px"
+                    />
+                  </li>
+
+                  <!-- for you tab 2nd list item -->
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <div class="fs-6 text-muted">Web Development</div>
+                      <div class="fs-6">
+                        <span class="fw-bold">JavaScript</span>
+                        <i class="fa fa-circle-check"></i>
+                        <span class="text-muted"> - 2h</span>
+                      </div>
+                      <div class="fs-6 fw-bold">
+                        JavaScript is a programming language that can run on
+                        browsers as well as desktops
+                      </div>
+                      <div class="fs-6 text-muted">123K Tweets</div>
+                    </div>
+                    <img
+                      src="../../images/JavaScript-logo.png"
+                      alt=""
+                      width="120px"
+                      class="wd-rounded-corners-all-around-10px"
+                    />
+                  </li>
+
+                  <!-- for you tab 3rd list item -->
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    <div
+                      class="d-flex flex-column justify-content-start h-auto w-auto"
+                    >
+                      <div class="fs-6 text-muted">Web Development</div>
+                      <div class="fs-6 fw-bold">jQuery</div>
+                      <div class="fs-6 text-muted">123K Tweets</div>
+                    </div>
+                    <img
+                      src="../../images/jquery-logo.gif"
+                      alt=""
+                      width="120px"
+                    />
+                  </li>
+
+                  <!-- for you tab 4th list item -->
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <div class="fs-6 text-muted">Web Development</div>
+                      <div class="fs-6">
+                        <span class="fw-bold">ReactJS</span>
+                        <i class="fa fa-circle-check"></i>
+                        <span class="text-muted"> - 2h</span>
+                      </div>
+                      <div class="fs-6 text-muted">123K Tweets</div>
+                    </div>
+                    <img
+                      src="../../images/nodejs-logo.png"
+                      alt=""
+                      width="120px"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="trending-tab-pane"
+              role="tabpanel"
+              aria-labelledby="trending-tab"
+              tabindex="0"
+            >
+              Trending tab content
+            </div>
+            <div
+              class="tab-pane fade"
+              id="news-tab-pane"
+              role="tabpanel"
+              aria-labelledby="news-tab"
+              tabindex="0"
+            >
+              News tab content
+            </div>
+            <div
+              class="tab-pane fade"
+              id="sports-tab-pane"
+              role="tabpanel"
+              aria-labelledby="sports-tab"
+              tabindex="0"
+            >
+              Sports tab content
+            </div>
+            <div
+              class="tab-pane fade"
+              id="entertainment-tab-pane"
+              role="tabpanel"
+              aria-labelledby="entertainment-tab"
+              tabindex="0"
+            >
+              Entertainment tab content
+            </div>
+          </div>
+        </div>
+        <!-- close </div> for main content -->
+
+        <!-- right side bar
+          1. Use card, the card header includes text "Who to follow"
+          2. Use list group to display list of suggestted users
+         -->
+        <div class="d-md-none d-lg-block col-xxl-4 col-xl-4 col-lg-4 p-2">
+          <div class="card">
+            <div class="card-header fw-bold fs-6 bg-white">Who to follow</div>
+            <ul class="list-group list-group-flush">
+              <!-- User 1 - Java -->
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center p-2 align-items-center"
+              >
+                <div class="d-flex justify-content-start">
+                  <img
+                    class="m-2 rounded-circle"
+                    src="../../images/Java_programming_language_logo.svg"
+                    alt=""
+                    width="45px"
+                    height="45px"
+                  />
+                  <div
+                    class="d-flex flex-column justify-content-center align-items-start"
+                  >
+                    <div class="fs-6 fw-bold">
+                      Java
+                      <i class="fa fa-circle-check"></i>
+                    </div>
+
+                    <a href="#" class="fs-6 text-decoration-none text-muted"
+                      >@Java</a
+                    >
+                  </div>
+                </div>
+                <button class="btn btn-primary rounded-pill">Follow</button>
+              </li>
+              <!-- User 2 - Relativety Space -->
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center p-2 align-items-center"
+              >
+                <div class="d-flex justify-content-start">
+                  <img
+                    class="m-2 rounded-circle"
+                    src="../../images/relativity-space-logo.jpeg"
+                    alt=""
+                    width="45px"
+                    height="45px"
+                  />
+                  <div
+                    class="d-flex flex-column justify-content-center align-items-start"
+                  >
+                    <div class="fs-6 fw-bold">
+                      Relativety Space
+                      <i class="fa fa-circle-check"></i>
+                    </div>
+                    <a href="#" class="fs-6 text-decoration-none text-muted"
+                      >@relativetyspace</a
+                    >
+                  </div>
+                </div>
+                <button class="btn btn-primary rounded-pill">Follow</button>
+              </li>
+              <!-- User 3 - Virgin Galactic -->
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center p-2 align-items-center"
+              >
+                <div class="d-flex justify-content-start">
+                  <img
+                    class="m-2 rounded-circle"
+                    src="../../images/virgin-logo.svg"
+                    alt=""
+                    width="45px"
+                    height="45px"
+                  />
+                  <div
+                    class="d-flex flex-column justify-content-center align-items-start"
+                  >
+                    <div class="fs-6 fw-bold">
+                      Virgin Galactic
+                      <i class="fa fa-circle-check"></i>
+                    </div>
+                    <a href="#" class="fs-6 text-decoration-none text-muted"
+                      >@virgingalactic</a
+                    >
+                  </div>
+                </div>
+                <button class="btn btn-primary rounded-pill">Follow</button>
+              </li>
+              <!-- User 4 - Nasa -->
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center p-2 align-items-center"
+              >
+                <div class="d-flex justify-content-start">
+                  <img
+                    class="m-2 rounded-circle"
+                    src="../../images/nasa-logo.jpeg"
+                    alt=""
+                    width="45px"
+                    height="45px"
+                  />
+                  <div
+                    class="d-flex flex-column justify-content-center align-items-start"
+                  >
+                    <div class="fs-6 fw-bold">
+                      NASA
+                      <i class="fa fa-circle-check"></i>
+                    </div>
+                    <a href="#" class="fs-6 text-decoration-none text-muted"
+                      >@NASA</a
+                    >
+                  </div>
+                </div>
+                <button class="btn btn-primary rounded-pill">Follow</button>
+              </li>
+              <!-- User 5 - Tesla -->
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center p-2 align-items-center"
+              >
+                <div class="d-flex justify-content-start">
+                  <img
+                    class="m-2 rounded-circle"
+                    src="../../images/tesla-logo.png"
+                    alt=""
+                    width="45px"
+                    height="45px"
+                  />
+                  <div
+                    class="d-flex flex-column justify-content-center align-items-start"
+                  >
+                    <div class="fs-6 fw-bold">
+                      Tesla
+                      <i class="fa fa-circle-check"></i>
+                    </div>
+                    <a href="#" class="fs-6 text-decoration-none text-muted"
+                      >@Tesla</a
+                    >
+                  </div>
+                </div>
+                <button class="btn btn-primary rounded-pill">Follow</button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <img src="../static/navigation-bloomberg-booster.png" alt="booster image" width="100px" height="100px" class="wd-float-right wd-rounded-corners-all-around-10px">
-      <div class="float-done"></div>
     </div>
-
-    <div class="wd-suggested-posts-card">
-      <div class="wd-float-left">
-        <div class="wd-suggested-posts-card-topic">
-          Covid-19
-        </div>
-        <div class="wd-suggested-posts-card-title">
-          Covid-19: News and updates from Massachusetts
-        </div>
-      </div>
-      <img src="../static/navigation-ma.png" alt="MA image" width="100px" height="100px" class="wd-float-right wd-rounded-corners-all-around-10px">
-      <div class="float-done"></div>
-    </div>
-
-    <div class="wd-suggested-posts-card">
-      <div class="wd-float-left">
-        <div class="wd-suggested-posts-card-topic">
-          Dovid-20
-        </div>
-        <div class="wd-suggested-posts-card-title">
-          Dovid-20: News and updates from Massachusetts
-        </div>
-      </div>
-      <img src="../static/navigation-ma.png" alt="MA image" width="100px" height="100px" class="wd-float-right wd-rounded-corners-all-around-10px">
-      <div class="float-done"></div>
-    </div>
-
-   </div>
-</body>
+  </body>
 </html>
