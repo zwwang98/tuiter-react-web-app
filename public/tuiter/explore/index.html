@@ -15,12 +15,6 @@
       href="../../vendors/fontawesome-free-6.2.1-web/css/all.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="./index.css" />
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js"
-      crossorigin="anonymous"
-    ></script>
     <script type="importmap">
       {
         "imports": {
@@ -34,6 +28,7 @@
 
       new bootstrap.Popover(document.getElementById("popoverButton"));
     </script>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
   </head>
   <body>
     <div class="container">
@@ -58,65 +53,79 @@
             </li>
             <li
               href=""
-              class="border-0 list-group-item list-group-item-action d-flex align-items-center"
+              class="border-0 list-group-item list-group-item-action d-flex align-items-center mt-1 mb-1"
             >
               <i class="fa fa-home fa-1x me-2"></i>
-              <span class="d-none d-xxl-block d-xl-block">Home</span>
+              <span class="d-none d-xxl-block d-xl-block text-secondary"
+                >Home</span
+              >
             </li>
             <li
               href=""
-              class="border-0 list-group-item list-group-item-action active d-flex align-items-center"
+              class="border-0 list-group-item list-group-item-action active d-flex align-items-center mt-1 mb-1"
             >
               <i class="fa fa-hashtag fa-1x me-2"></i>
               <span class="d-none d-xxl-block d-xl-block">Explore</span>
             </li>
             <li
               href=""
-              class="border-0 list-group-item list-group-item-action d-flex align-items-center"
+              class="border-0 list-group-item list-group-item-action d-flex align-items-center mt-1 mb-1"
             >
               <i class="far fa-bell fa-1x me-2"></i>
-              <span class="d-none d-xxl-block d-xl-block">Notification</span>
+              <span class="d-none d-xxl-block d-xl-block text-secondary"
+                >Notification</span
+              >
             </li>
             <li
               href=""
-              class="border-0 list-group-item list-group-item-action d-flex align-items-center"
+              class="border-0 list-group-item list-group-item-action d-flex align-items-center mt-1 mb-1"
             >
               <i class="far fa-envelope me-2"></i>
-              <span class="d-none d-xxl-block d-xl-block">Messages</span>
+              <span class="d-none d-xxl-block d-xl-block text-secondary"
+                >Messages</span
+              >
             </li>
             <li
               href=""
-              class="border-0 list-group-item list-group-item-action d-flex align-items-center"
+              class="border-0 list-group-item list-group-item-action d-flex align-items-center mt-1 mb-1"
             >
               <i class="fa fa-bookmark fa-1x me-2"></i>
-              <span class="d-none d-xxl-block d-xl-block">Lists</span>
+              <span class="d-none d-xxl-block d-xl-block text-secondary"
+                >Lists</span
+              >
             </li>
             <li
               href=""
-              class="border-0 list-group-item list-group-item-action d-flex align-items-center"
+              class="border-0 list-group-item list-group-item-action d-flex align-items-center mt-1 mb-1"
             >
               <i class="fa fa-user fa-1x me-2"></i>
-              <span class="d-none d-xxl-block d-xl-block">Profiles</span>
+              <span class="d-none d-xxl-block d-xl-block text-secondary"
+                >Profiles</span
+              >
             </li>
             <li
               href=""
-              class="border-0 list-group-item list-group-item-action d-flex align-items-center"
+              class="border-0 list-group-item list-group-item-action d-flex align-items-center mt-1 mb-1"
             >
               <i class="fa fa-circle-info fa-1x me-2"></i>
-              <span class="d-none d-xxl-block d-xl-block">More</span>
+              <span class="d-none d-xxl-block d-xl-block text-secondary"
+                >More</span
+              >
             </li>
           </ul>
-          <button class="btn text-white wd-bg-twitter-blue w-100 rounded-pill">
+          <button
+            class="btn text-white wd-bg-twitter-blue w-100 rounded-pill mt-2"
+          >
             Tweet
           </button>
         </div>
 
         <!-- main content -->
         <div
-          class="col-xxl-6 col-xl-6 col-lg-7 col-md-10 col-sm-10 col-11 bg-light-white pt-2 ps-3 pe-3"
+          class="col-xxl-6 col-xl-6 col-lg-7 col-md-10 col-sm-10 col-11 bg-light-white pt-2 ps-0 pe-0 border border-1 border-light"
         >
           <!-- Search Bar -->
-          <div class="row mb-2">
+          <div class="row mb-2 ms-3 me-3">
             <div class="col-10">
               <div
                 class="input-group d-flex align-items-center border-secondary border border-0 rounded-pill ps-2 pe-4 bg-light"
@@ -131,18 +140,22 @@
                 />
               </div>
             </div>
-            <div class="col-2 d-flex justify-content-center align-items-center">
+            <div class="col-2 d-flex justify-content-end align-items-center">
               <span class="text-dark">
-                <i class="fa fa-gear fa-xl"></i>
+                <i class="fa fa-gear fa-xl pe-1"></i>
               </span>
             </div>
           </div>
 
           <!-- Tabs -->
-          <ul class="nav nav-tabs mb-2" id="myTab" role="tablist">
+          <ul
+            class="nav nav-tabs nav-fill ms-4 me-4 pb-1"
+            id="myTab"
+            role="tablist"
+          >
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link active"
+                class="nav-link active wd-custom-tab ps-0 pe-0"
                 id="for-you-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#for-you-tab-pane"
@@ -151,12 +164,12 @@
                 aria-controls="for-you-tab-pane"
                 aria-selected="true"
               >
-                For you
+                <span>For you</span>
               </button>
             </li>
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link"
+                class="nav-link wd-custom-tab ps-0 pe-0"
                 id="trending-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#trending-tab-pane"
@@ -170,7 +183,7 @@
             </li>
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link"
+                class="nav-link wd-custom-tab ps-0 pe-0"
                 id="news-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#news-tab-pane"
@@ -184,7 +197,7 @@
             </li>
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link"
+                class="nav-link wd-custom-tab ps-0 pe-0"
                 id="sports-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#sports-tab-pane"
@@ -198,7 +211,7 @@
             </li>
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link d-sm-none d-md-block"
+                class="nav-link d-sm-none d-md-block wd-custom-tab ps-0 pe-0"
                 id="entertainment-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#entertainment-tab-pane"
@@ -223,7 +236,7 @@
                 <div class="card rounded-0">
                   <img
                     src="../../images/spacex-starship.webp"
-                    class=""
+                    class="mb-1"
                     alt="..."
                     height="400px"
                   />
@@ -233,10 +246,10 @@
                     </div>
                   </div>
                 </div>
-                <ul class="list-group list-group-flush">
+                <ul class="list-group list-group-flush border-0">
                   <!-- for you tab 1st list item -->
                   <li
-                    class="list-group-item d-flex justify-content-between align-items-center"
+                    class="list-group-item d-flex justify-content-between align-items-center mb-2 wd-border-0"
                   >
                     <div>
                       <div class="fs-6 text-muted">Web Development</div>
@@ -260,7 +273,7 @@
 
                   <!-- for you tab 2nd list item -->
                   <li
-                    class="list-group-item d-flex justify-content-between align-items-center"
+                    class="list-group-item d-flex justify-content-between align-items-center mb-2 wd-border-0"
                   >
                     <div>
                       <div class="fs-6 text-muted">Web Development</div>
@@ -285,7 +298,7 @@
 
                   <!-- for you tab 3rd list item -->
                   <li
-                    class="list-group-item d-flex justify-content-between align-items-center"
+                    class="list-group-item d-flex justify-content-between align-items-center mb-2 wd-border-0"
                   >
                     <div
                       class="d-flex flex-column justify-content-start h-auto w-auto"
@@ -303,7 +316,7 @@
 
                   <!-- for you tab 4th list item -->
                   <li
-                    class="list-group-item d-flex justify-content-between align-items-center"
+                    class="list-group-item d-flex justify-content-between align-items-center mb-2"
                   >
                     <div>
                       <div class="fs-6 text-muted">Web Development</div>
@@ -368,11 +381,13 @@
           2. Use list group to display list of suggestted users
          -->
         <div class="d-md-none d-lg-block col-xxl-4 col-xl-4 col-lg-4 p-2">
-          <div class="card border-0 rounded-3 text-bg-light">
-            <div class="card-header fw-bold fs-6 border-0 text-bg-light">
+          <div class="card border-0 rounded-5 text-bg-light">
+            <div
+              class="card-header fw-bold fs-6 border border-0 text-bg-light rounded-5"
+            >
               Who to follow
             </div>
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-flush rounded-5">
               <!-- User 1 - Java -->
               <li
                 class="text-bg-light border-0 list-group-item d-flex justify-content-between align-items-center p-2"
@@ -398,7 +413,9 @@
                     >
                   </div>
                 </div>
-                <button class="btn btn-primary rounded-pill">Follow</button>
+                <button class="btn btn-dark text-white ps-3 pe-3 rounded-pill">
+                  Follow
+                </button>
               </li>
               <!-- User 2 - Relativety Space -->
               <li
@@ -424,7 +441,9 @@
                     >
                   </div>
                 </div>
-                <button class="btn btn-primary rounded-pill">Follow</button>
+                <button class="btn btn-dark text-white ps-3 pe-3 rounded-pill">
+                  Follow
+                </button>
               </li>
               <!-- User 3 - Virgin Galactic -->
               <li
@@ -450,7 +469,9 @@
                     >
                   </div>
                 </div>
-                <button class="btn btn-primary rounded-pill">Follow</button>
+                <button class="btn btn-dark text-white ps-3 pe-3 rounded-pill">
+                  Follow
+                </button>
               </li>
               <!-- User 4 - Nasa -->
               <li
@@ -476,7 +497,9 @@
                     >
                   </div>
                 </div>
-                <button class="btn btn-primary rounded-pill">Follow</button>
+                <button class="btn btn-dark text-white ps-3 pe-3 rounded-pill">
+                  Follow
+                </button>
               </li>
               <!-- User 5 - Tesla -->
               <li
@@ -502,7 +525,9 @@
                     >
                   </div>
                 </div>
-                <button class="btn btn-primary rounded-pill">Follow</button>
+                <button class="btn btn-dark text-white ps-3 pe-3 rounded-pill">
+                  Follow
+                </button>
               </li>
             </ul>
           </div>
