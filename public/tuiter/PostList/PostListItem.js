@@ -18,7 +18,12 @@ const PostListItem = (post) => {
             <div class="text-dark">- ${post.time}</div>
           </div>
           <p class="card-text">
-            ${post.postText}
+            ${addLinkToHandle(post.postText)}
+            ${
+              post.hasPostLink
+                ? `<a href=${post.postLink} class="text-decoration-none">${post.postLink}</a>`
+                : ""
+            }
           </p>
 
           <!-- link card in post -->
@@ -94,5 +99,28 @@ const PostListItem = (post) => {
   </div>
   `;
 };
+
+function addLinkToHandle(tweetText) {
+  // Find all instances of "@" followed by a word
+  let mentions = tweetText.match(/@\w+/g) || [];
+  console.log("mentions:", mentions);
+
+  // Iterate through each mention
+  for (let i = 0; i < mentions.length; i++) {
+    // Get the username
+    let username = mentions[i].substring(1);
+
+    // Replace the mention with a link to the user's profile
+    tweetText = tweetText.replace(
+      mentions[i],
+      '<a href="https://twitter.com/' +
+        username +
+        '" class="text-decoration-none">' +
+        mentions[i] +
+        "</a>"
+    );
+  }
+  return tweetText;
+}
 
 export default PostListItem;

@@ -31,6 +31,7 @@ const posts = [
     time: "23h",
     postText:
       "Grimes seen reading Karl Marx following split with world's richest man Elon Musk",
+    hasPostLink: true,
     postLink: "trib.al/nx2Gfaq",
 
     // link card
