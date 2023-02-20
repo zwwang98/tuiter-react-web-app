@@ -1,5 +1,6 @@
 import Nav from "../labs/a6/nav";
 import NavigationSidebar from "./navigation-sidebar";
+import WhoToFollowListItem from "./who-to-follow-list/who-to-follow-list-item";
 
 function Tuiter() {
   return (
