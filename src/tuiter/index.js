@@ -1,7 +1,7 @@
 import Nav from "../labs/a6/nav";
 import NavigationSidebar from "./navigation-sidebar";
 import WhoToFollowList from "./who-to-follow-list";
-import PostSummaryItem from "./post-summary-list/post-summary-item";
+import PostSummaryList from "./post-summary-list";
 
 function Tuiter() {
   return (
@@ -9,7 +9,7 @@ function Tuiter() {
       <Nav />
       <NavigationSidebar active="home" />
       <WhoToFollowList />
-      <PostSummaryItem />
+      <PostSummaryList />
       <h1>Tuiter</h1>
     </div>
   );
