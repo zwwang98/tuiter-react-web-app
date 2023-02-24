@@ -1,5 +1,13 @@
 import React from "react";
 import ActivityFeed from "./activity-feed";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faComment } from "@fortawesome/free-regular-svg-icons";
+import {
+  faArrowUpFromBracket,
+  faRetweet,
+  faCircleCheck,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Tweet = ({
   tweet = {
@@ -49,7 +57,7 @@ const Tweet = ({
             <div>
               <div className="d-flex">
                 <h6 className="card-title me-1">{tweet.userName}</h6>
-                <i className="fa fa-circle-check me-2"></i>
+                <FontAwesomeIcon icon={faCircleCheck} />
                 <div className="text-dark me-2">@{tweet.handle}</div>
                 <div className="text-dark">- {tweet.time}</div>
               </div>
@@ -105,19 +113,19 @@ const Tweet = ({
                 : ""}
               <div className="row text-dark">
                 <div className="col-3 d-flex align-items-center">
-                  <i className="fa-regular fa-comment me-2"></i>
+                  <FontAwesomeIcon icon={faComment} />
                   <span>{tweet.commentCount}</span>
                 </div>
                 <div className="col-3 d-flex align-items-center">
-                  <i className="fa-solid fa-retweet me-2"></i>
+                  <FontAwesomeIcon icon={faRetweet} />
                   <span>{tweet.retweetCount}</span>
                 </div>
                 <div className="col-3 d-flex align-items-center">
-                  <i className="fa-regular fa-heart me-2"></i>
+                  <FontAwesomeIcon icon={faHeart} />
                   <span>{tweet.likeCount}</span>
                 </div>
                 <div className="col-3 d-flex align-items-center">
-                  <i className="fa-solid fa-arrow-up-from-bracket"></i>
+                  <FontAwesomeIcon icon={faArrowUpFromBracket} />
                 </div>
               </div>
             </div>
