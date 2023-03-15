@@ -2,6 +2,7 @@ import Assignment6 from "./a6";
 import Assignment7 from "./a7";
 import Nav from "./a6/nav";
 import { Routes, Route } from "react-router";
+import TuitsList from "../tuiter/tuits/tuits-list";
 
 function Labs() {
   return (

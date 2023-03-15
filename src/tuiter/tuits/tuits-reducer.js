@@ -6,4 +6,7 @@ const tuitsSlice = createSlice({
   initialState: tuits,
 });
 
+console.log("Print tuits array:");
+console.log(tuits);
+
 export default tuitsSlice.reducer;

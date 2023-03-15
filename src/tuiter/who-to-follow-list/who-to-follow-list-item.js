@@ -17,14 +17,14 @@ const WhoToFollowListItem = ({
               alt=""
             />
           </div>
-          <div className="col-8">
+          <div className="col-7">
             <div className="fs-6 fw-bold">{who.userName}</div>
             <a href="#" className="fs-6 text-decoration-none text-muted">
               {who.handle}
             </a>
           </div>
-          <div className="col-2 d-flex justify-content-center align-items-center">
-            <button className="btn btn-primary text-white ps-3 pe-3 rounded-pill">
+          <div className="col-3 d-flex justify-content-center align-items-center">
+            <button className="btn btn-primary text-white rounded-pill">
               Follow
             </button>
           </div>

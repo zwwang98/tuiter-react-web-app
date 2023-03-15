@@ -2,7 +2,11 @@ import React from "react";
 import ActivityFeed from "./activity-feed";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faComment } from "@fortawesome/free-regular-svg-icons";
+import {
+  faComment,
+  faHeart as regularHeart,
+} from "@fortawesome/free-regular-svg-icons";
+import { faHeart as solidHeart } from "@fortawesome/free-solid-svg-icons";
 import {
   faArrowUpFromBracket,
   faRetweet,
@@ -31,6 +35,7 @@ const Tweet = ({
     hasImage: false,
     image: "",
 
+    liked: false,
     commentCount: "4.2K",
     retweetCount: "3.5K",
     likeCount: "37.5K",
@@ -111,6 +116,8 @@ const Tweet = ({
                 </div>
               `
                 : ""}
+
+              {/* Tweet Stats */}
               <div className="row text-dark">
                 <div className="col-3 d-flex align-items-center">
                   <FontAwesomeIcon icon={faComment} />
@@ -121,7 +128,12 @@ const Tweet = ({
                   <span>{tweet.retweetCount}</span>
                 </div>
                 <div className="col-3 d-flex align-items-center">
-                  <FontAwesomeIcon icon={faHeart} />
+                  {tweet.liked ? (
+                    <FontAwesomeIcon color="red" icon={solidHeart} />
+                  ) : (
+                    <FontAwesomeIcon icon={regularHeart} />
+                  )}
+
                   <span>{tweet.likeCount}</span>
                 </div>
                 <div className="col-3 d-flex align-items-center">
