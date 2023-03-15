@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addTodo, deleteTodo } from "./reducers/todos-reducer";
+import { addTodo, deleteTodo, todoDoneToggle } from "./reducers/todos-reducer";
 
 const Todos = () => {
   const todos = useSelector((state) => state.todos);
@@ -12,6 +12,10 @@ const Todos = () => {
   // passing index of todo we want to delete
   const deleteTodoClickHandler = (index) => {
     dispatch(deleteTodo(index));
+  };
+
+  const toggleTodoDone = (todo) => {
+    dispatch(todoDoneToggle(todo));
   };
 
   const createTodoClickHandler = () => {
@@ -54,7 +58,14 @@ const Todos = () => {
             >
               Delete
             </button>
+            <input
+              type="checkbox"
+              checked={todo.done}
+              onChange={() => toggleTodoDone(todo)}
+              className="me-2"
+            />
             <p>{todo.do}</p>
+            <p>{todo.done ? "Done" : "Todo"}</p>
           </li>
         ))}
       </ul>
