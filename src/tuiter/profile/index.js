@@ -1,8 +1,10 @@
 import React from "react";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCakeCandles } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLocationDot,
+  faCakeCandles,
+} from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Profile = ({
   profile = {
@@ -38,9 +40,11 @@ const Profile = ({
           />
         </div>
         <div className="d-flex justify-content-center align-items-center pb-4">
-          <button className="btn btn-light mt-2 border border-2 border-dark-subtle rounded-pill">
-            Edit Profile
-          </button>
+          <a href="/tuiter/edit-profile">
+            <button className="btn btn-light mt-2 border border-2 border-dark-subtle rounded-pill">
+              Edit Profile
+            </button>
+          </a>
         </div>
       </div>
       {/* username and handle */}

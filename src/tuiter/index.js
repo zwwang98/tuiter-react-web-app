@@ -10,6 +10,7 @@ import NavigationSidebar from "./navigation-sidebar";
 import WhoToFollowList from "./who-to-follow-list";
 import TuitsList from "./tuits/tuits-list";
 import Profile from "./profile";
+import EditProfile from "./edit-profile";
 
 const store = configureStore({
   reducer: { who: whoReducer, tuits: tuitsReducer },
@@ -31,6 +32,7 @@ function Tuiter() {
             <Route index element={<HomeComponent />} />
             <Route path="explore" element={<ExploreComponent />} />
             <Route path="profile" element={<Profile />} />
+            <Route path="edit-profile" element={<EditProfile />} />
           </Routes>
         </div>
         <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
