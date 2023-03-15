@@ -5,23 +5,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
-const Profile = ({
-  profile = {
-    firstName: "Jose",
-    lastName: "Annunziato",
-    handle: "@jannunzi",
-    profilePicture: "jonathan-boccara.jpeg",
-    bannerPicture: "polyglot.png",
-    bio: "Faculty, Software Engineer, AI, Space, and renewable enthusiast. Retuits and likes are not endorsements.",
-    website: "youtube.com/webdevtv",
-    location: "Boston, MA",
-    dateOfBirth: "7/7/1968",
-    dateJoined: "4/2009",
-    followingCount: 340,
-    followersCount: 223,
-  },
-}) => {
+const Profile = () => {
+  const profile = useSelector((state) => state.profile);
+
+  console.log("[Profile Component]", profile);
+
   return (
     <>
       <h1>Proifle Component</h1>
@@ -40,11 +31,12 @@ const Profile = ({
           />
         </div>
         <div className="d-flex justify-content-center align-items-center pb-4">
-          <a href="/tuiter/edit-profile">
-            <button className="btn btn-light mt-2 border border-2 border-dark-subtle rounded-pill">
-              Edit Profile
-            </button>
-          </a>
+          <Link
+            className="btn btn-light mt-2 border border-2 border-dark-subtle rounded-pill"
+            to="/tuiter/edit-profile"
+          >
+            Edit Profile
+          </Link>
         </div>
       </div>
       {/* username and handle */}
