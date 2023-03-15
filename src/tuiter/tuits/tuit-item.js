@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,8 +12,14 @@ import {
   faRetweet,
   faCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
+import { deleteTuit } from "./tuits-reducer";
 
 const TuitItem = ({ tuit }) => {
+  const dispatch = useDispatch();
+  const deleteTuitHandler = (id) => {
+    dispatch(deleteTuit(id));
+  };
+
   return (
     <>
       {/* tuit */}
@@ -27,11 +34,17 @@ const TuitItem = ({ tuit }) => {
               className="me-2 rounded-circle"
             />
             <div className=" flex-grow-1">
-              <div className="d-flex">
-                <h6 className="card-title me-1">{tuit.userName}</h6>
-                <FontAwesomeIcon icon={faCircleCheck} color="blue" />
-                <div className="text-dark">{tuit.handle}</div>
-                <div className="text-dark">- {tuit.time}</div>
+              <div className="d-flex justify-content-between">
+                <div className="d-flex">
+                  <h6 className="card-title me-1">{tuit.userName}</h6>
+                  <FontAwesomeIcon icon={faCircleCheck} color="blue" />
+                  <div className="text-dark">{tuit.handle}</div>
+                  <div className="text-dark">- {tuit.time}</div>
+                </div>
+                <i
+                  className="bi bi-x-lg float-end"
+                  onClick={() => deleteTuitHandler(tuit._id)}
+                ></i>
               </div>
               <p className="card-text">
                 {tuit.tuit}
