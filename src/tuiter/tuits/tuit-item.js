@@ -16,7 +16,7 @@ const TuitItem = ({ tuit }) => {
   return (
     <>
       {/* tuit */}
-      <div className="card text-black rounded-0 bg-white border-1 border-secondary">
+      <div className="card text-black rounded-0 bg-white border-1 border-secondary w-100">
         <div className="card-body">
           <div className="d-flex justify-content-start">
             <img
@@ -26,7 +26,7 @@ const TuitItem = ({ tuit }) => {
               height="48px"
               className="me-2 rounded-circle"
             />
-            <div>
+            <div className=" flex-grow-1">
               <div className="d-flex">
                 <h6 className="card-title me-1">{tuit.userName}</h6>
                 <FontAwesomeIcon icon={faCircleCheck} color="blue" />
