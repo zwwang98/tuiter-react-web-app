@@ -11,11 +11,9 @@ import { Link } from "react-router-dom";
 const Profile = () => {
   const profile = useSelector((state) => state.profile);
 
-  console.log("[Profile Component]", profile);
-
   return (
     <>
-      <h1>Proifle Component</h1>
+      {/* <div className="fs-3">Proifle</div> */}
       {/* banner */}
       <img className="w-100" src="/images/fluentcpp.jpeg" alt="fluentcpp" />
       {/* avatar, more, follow button */}
@@ -24,7 +22,7 @@ const Profile = () => {
           <img
             width={160}
             height={160}
-            className="rounded-circle border border-5 border-dark ms-3"
+            className="rounded-circle border border-4 border-white ms-3"
             style={{ position: "absolute", bottom: "1px" }}
             src={`/images/${profile.profilePicture}`}
             alt="profile"

@@ -36,17 +36,22 @@ const EditProfile = () => {
     dispatch(editWebsite(website));
   };
 
+  const deleteTodoClickHandler = () => {};
+
   return (
     <>
       <div className="d-flex justify-content-between p-2">
-        <h1>Edit Profile</h1>
+        <div className="d-flex justify-content-center align-items-center">
+          <Link to="/tuiter/profile" className="bi bi-x-lg float-end me-5" />
+          <div className="fs-4 fw-semibold">Edit Profile</div>
+        </div>
         {/* <a href="/tuiter/profile"> */}
         <Link
-          className="btn btn-primary rounded-pill ps-4 pe-4"
+          className="btn btn-dark rounded-pill ps-3 pe-3 fs-6 fw-semibold d-flex justify-content-center align-items-center"
           to="/tuiter/profile"
           onClick={() => onClickSaveButton()}
         >
-          Save
+          <div>Save</div>
         </Link>
         {/* </a> */}
       </div>
