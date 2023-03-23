@@ -9,7 +9,6 @@ import ExploreComponent from "./explore";
 import HomeComponent from "./home";
 import NavigationSidebar from "./navigation-sidebar";
 import WhoToFollowList from "./who-to-follow-list";
-import TuitsList from "./tuits/tuits-list";
 import Profile from "./profile";
 import EditProfile from "./edit-profile";
 
