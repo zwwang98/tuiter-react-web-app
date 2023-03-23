@@ -12,12 +12,13 @@ import {
   faRetweet,
   faCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
-import { deleteTuit } from "./tuits-reducer";
+import { deleteTuitThunk } from "../../services/tuits-thunks";
+import TuitStats from "./tuit-stats";
 
 const TuitItem = ({ tuit }) => {
   const dispatch = useDispatch();
   const deleteTuitHandler = (id) => {
-    dispatch(deleteTuit(id));
+    dispatch(deleteTuitThunk(id));
   };
 
   return (
@@ -53,7 +54,8 @@ const TuitItem = ({ tuit }) => {
                   : ""}
               </p>
               {/* tuit Stats */}
-              <div className="row text-dark">
+              <TuitStats tuit={tuit} />
+              {/* <div className="row text-dark">
                 <div className="col-3 d-flex align-items-center">
                   <FontAwesomeIcon icon={faComment} />
                   <span>{tuit.replies}</span>
@@ -73,7 +75,7 @@ const TuitItem = ({ tuit }) => {
                 <div className="col-3 d-flex align-items-center">
                   <FontAwesomeIcon icon={faArrowUpFromBracket} />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

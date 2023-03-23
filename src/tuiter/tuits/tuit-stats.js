@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,8 +11,11 @@ import {
   faArrowUpFromBracket,
   faRetweet,
 } from "@fortawesome/free-solid-svg-icons";
+import { updateTuitThunk } from "../../services/tuits-thunks.js";
 
 const TuitStats = ({ tuit }) => {
+  const dispatch = useDispatch();
+
   return (
     <>
       <div className="row text-dark">
@@ -25,9 +29,32 @@ const TuitStats = ({ tuit }) => {
         </div>
         <div className="col-3 d-flex align-items-center">
           {tuit.liked ? (
-            <FontAwesomeIcon color="red" icon={solidHeart} />
+            <FontAwesomeIcon
+              color="red"
+              icon={solidHeart}
+              onClick={() =>
+                dispatch(
+                  updateTuitThunk({
+                    ...tuit,
+                    likes: tuit.likes - 1,
+                    liked: false,
+                  })
+                )
+              }
+            />
           ) : (
-            <FontAwesomeIcon icon={regularHeart} />
+            <FontAwesomeIcon
+              icon={regularHeart}
+              onClick={() =>
+                dispatch(
+                  updateTuitThunk({
+                    ...tuit,
+                    likes: tuit.likes + 1,
+                    liked: true,
+                  })
+                )
+              }
+            />
           )}
           <span>{tuit.likes}</span>
         </div>
