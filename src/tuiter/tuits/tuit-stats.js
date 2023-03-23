@@ -27,6 +27,7 @@ const TuitStats = ({ tuit }) => {
           <FontAwesomeIcon icon={faRetweet} />
           <span>{tuit.retuits}</span>
         </div>
+        {/* like or dislike */}
         <div className="col-3 d-flex align-items-center">
           {tuit.liked ? (
             <FontAwesomeIcon
